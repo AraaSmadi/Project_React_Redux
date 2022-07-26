@@ -6,8 +6,7 @@ import {projectReducer} from './reducers/projectReducer';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import 'bootstrap/dist/css/bootstrap.min.css';
-const store=createStore(projectReducer,applyMiddleware(thunk));
-
+import {store} from './Slice/Store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

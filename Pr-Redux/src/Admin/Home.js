@@ -21,10 +21,10 @@ const Home = () => {
         <div className="card col-md-4 mt-3">
         <div className="card-body">
         
-        <h3 className="mb-2">{el.Product_name}</h3>
-             <p className="card-text">{el.Price}</p>
+        <h3 className="mb-2"> {el.Product_name}</h3>
+             <p className="card-text">Price : {el.Price}</p>
            
-             <p className="card-text"> { el.describtion}</p>
+             <p className="card-text"> Describtion : { el.describtion}</p>
            
              <Link to={'/edit/'+el.id} className="btn"  style={{ marginRight: "10px", backgroundColor:" #ceb3cb"  }}>Edit</Link>       
              <button className="btn"  onClick={() => {dispatch(deleteUser(el.id))}}  style={{ backgroundColor:" #ceb3cb"}}> Delete</button>
