@@ -13,6 +13,7 @@ export const fetchData = () => {
 }
 
 export const addUser=(Product_name,Price,describtion)=>{
+    window.location.href = "http://localhost:3000";
     return(dispatch)=>{
         axios.post('https://62c47caf7d83a75e39fb0ca3.mockapi.io/Shopping',{Product_name,Price,describtion})
         .then(response=>{
@@ -30,7 +31,7 @@ export const addUser=(Product_name,Price,describtion)=>{
 
 export const updateUser = async(data,id) => {
     const response=await axios.put(`https://62c47caf7d83a75e39fb0ca3.mockapi.io/Shopping/${id}`,data)
-    window.location.href = "http://localhost:3001";
+    window.location.href = "http://localhost:3000";
     return (dispatch)=>{
         
            dispatch({
@@ -42,7 +43,7 @@ export const updateUser = async(data,id) => {
 
 export const deleteUser = async(id) => {
     const response=await axios.delete(`https://62c47caf7d83a75e39fb0ca3.mockapi.io/Shopping/${id}`)
-    window.location.href = "http://localhost:3001";
+    window.location.href = "http://localhost:3000";
     return (dispatch)=>{
         
            dispatch({
@@ -57,7 +58,7 @@ export const Check= (email,password ,islogged)=>{
     return (dispatch)=>{
 if(email== "araa2016@gmail.com" && password=="123456"){
     islogged =true;
- window.alert('login is successfully');
+    window.location.href = "http://localhost:3000/Home";
  
 }else{
     islogged =false;

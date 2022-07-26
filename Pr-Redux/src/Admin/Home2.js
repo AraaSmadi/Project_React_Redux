@@ -25,8 +25,6 @@ const Home = () => {
            
              <p className="card-text"> Describtion : { el.describtion}</p>
            
-             <Link to={'/edit/'+el.id} className="btn"  style={{ marginRight: "10px", backgroundColor:" #ceb3cb"  }}>Edit</Link>       
-             <button className="btn"  onClick={() => {dispatch(deleteUser(el.id))}}  style={{ backgroundColor:" #ceb3cb"}}> Delete</button>
 
        </div>
        </div>
