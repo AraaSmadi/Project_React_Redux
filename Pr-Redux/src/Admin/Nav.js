@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 export default function Nav() {
  const [log , setlog]= useState(false);
+ useEffect(()=>{
+  dispatch(Check(log));
+ })
   return (
     <div>
         <nav className="navbar navbar-expand-lg " style={{ backgroundColor:" #ceb3cb" }}>
