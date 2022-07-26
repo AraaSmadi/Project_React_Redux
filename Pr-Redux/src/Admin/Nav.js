@@ -1,10 +1,14 @@
 
 import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch  } from 'react-redux';
+// import { Check } from '../Action';
+// e
+//  const user = useSelector(state =>state);
+//  console.log(user);
+//  const dispatch=useDispatch();
+//    dispatch(Check());
 export default function Nav() {
- const user = useSelector(state =>state.login.isloged);
- console.log(user);
   return (
     <div>
         <nav className="navbar navbar-expand-lg " style={{ backgroundColor:" #ceb3cb" }}>
@@ -18,17 +22,14 @@ export default function Nav() {
                     <li className="nav-item">
                         <NavLink className="nav-link" aria-current="page" to="/">Home</NavLink>
                     </li>
-                    {user &&
-                    <li className="nav-item">
+                  
+                 <li className="nav-item">
                         <NavLink className="nav-link" to="/add">Add Product</NavLink>
                     </li>
-}
-                    {!user &&
-                    <li className="nav-item">
+                   <li className="nav-item">
                         <NavLink className="nav-link" to="/login">Login</NavLink>
                     </li>
-                    }
-
+                     
                 </ul>
                 </div>
             </div>

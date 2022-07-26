@@ -10,9 +10,8 @@ const Home = () => {
  console.log(users)
    useEffect(()=>{
      dispatch(fetchData());
-   },[])
-
- 
+   },[dispatch])
+   
   return (
     <div  class="row ">
            {users.length>0 && users.map(el=>{

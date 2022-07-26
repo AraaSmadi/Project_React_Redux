@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchData = () => {
     return async(dispatch,getstate)=>{
         const response=await axios.get("https://62c47caf7d83a75e39fb0ca3.mockapi.io/Shopping");
-        console.log(response.data)
+        
         dispatch({
             type:"FETCH_DATA",
             payload:response.data
@@ -57,12 +57,11 @@ export const Check= (email,password ,islogged)=>{
     return (dispatch)=>{
 if(email== "araa2016@gmail.com" && password=="123456"){
     islogged =true;
+ window.alert('login is successfully');
  
 }else{
     islogged =false;
-
 }
-let log = islogged ;
     dispatch({
         type:'CHECK',
         payload:islogged

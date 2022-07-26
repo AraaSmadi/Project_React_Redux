@@ -25,7 +25,7 @@ export const projectReducer = (state={ user: []  },action) => {
         }
  
         case "CHECK":
-            console.log(action.payload)
+         console.log(action.payload)
         return action.payload
         
 
